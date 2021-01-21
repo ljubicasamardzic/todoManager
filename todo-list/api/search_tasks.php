@@ -1,4 +1,5 @@
 <?php
+        // Pretraga radi na principu tri kriterijuma, od kojih korisnik može izabrati nijedan, jedan, dva ili sva tri
 
         $todos = json_decode(file_get_contents('../todo.db'), true);
         $to_show = [];
