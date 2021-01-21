@@ -141,6 +141,10 @@ document.getElementById('dodaj_novi_forma').addEventListener('submit', function 
     });
 });
 
+// funkcija prikazuje poruku na osnovu korisnikove radnje i njene uspješnosti
+// radi na principu jQuery-ija kojim se određeni blokovi skrivaju ili pojavljuju na osnovu gorepomenutih kriterijuma
+// dodata je jQuery animacija koja traje sekund nakon čega dotični blok nestane
+
 function prikaziPoruku(poruka) {
     if (poruka == 'izmjena-usp') {
         $('#poruka-izmjena-usp').css('display', 'block');
@@ -221,6 +225,7 @@ document.getElementById('pretraga_forma').addEventListener('submit', function (e
     });
 });
 
+// brisanje svih odabranih vrijednosti za pretragu i ponovno serviranje svih informacija iz todo.db
 document.getElementById('otkazi-pretragu').addEventListener('click', function (e) {
     e.preventDefault();
     document.getElementById('pretraga_tekst').value = "";
